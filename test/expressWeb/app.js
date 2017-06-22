@@ -8,7 +8,13 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/home', function(req, res) {
-    res.end('Hello World!');
+    res.json([1,2,3]);
+});
+
+app.get('/', function(req, res) {
+    res.end("Awesome");
 });
 
 app.listen(13337);
+
+module.exports = app;
