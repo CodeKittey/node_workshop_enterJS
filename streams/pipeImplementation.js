@@ -10,10 +10,10 @@ readerStream.on('data', function(data){
   var isReady = writerStream.write(data,'UTF8');
 
   if (!isReady){
-    input.pause();
+    readerStream.pause();
 
-    output.once('drain', function(){
-      input.resume();
+    writerStream.once('drain', function(){
+      readerStream.resume();
     });
   }
 });
