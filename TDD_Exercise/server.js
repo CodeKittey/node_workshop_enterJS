@@ -24,19 +24,23 @@ var employees = [
     { id: 3,  name : "Martina", prename: "Codekittey", codingLanguages:["c#", "Javascript"]},
     { id: 4,  name : "Jan", prename: "Zucker", codingLanguages:["c#", "Javascript"]}
 ];
-// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
+
+//return 'hello world'
 router.get('/', function(req, res) {
 
 });
 
+//return the employees JSON-Array
 router.get('/dev', function(req, res) {
 
 });
 
+//return the employee for the given id
 router.get('/dev/:id', function(req, res) {
 
 });
 
+//add one eployee to the employees-Array and return 201 statuscode
 router.post('/dev', function(req, res) {
 
 });
